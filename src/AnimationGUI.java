@@ -11,7 +11,7 @@ public class AnimationGUI extends javax.swing.JFrame {
     public AnimationGUI() {
         initComponents();
 
-        nw = new NatureWorker(label, label.getWidth(), label.getHeight(), 0.5,
+        nw = new NatureWorker(label, label.getWidth(), label.getHeight(), 0.5d,
                 speedSlider.getValue(), (Integer) durationSpinner.getValue());
         // two last values: speed ja duration (?)
 
@@ -98,7 +98,7 @@ public class AnimationGUI extends javax.swing.JFrame {
         if (!nw.isDone()) {
             nw.cancel(true);
         }
-        nw = new NatureWorker(label, label.getWidth(), label.getHeight(), 0.5,
+        nw = new NatureWorker(label, label.getWidth(), label.getHeight(), 0.5d,
                 speedSlider.getValue(), (Integer) durationSpinner.getValue());
         nw.execute();
     }//GEN-LAST:event_doButtonActionPerformed
